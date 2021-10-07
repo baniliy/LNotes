@@ -2,7 +2,7 @@
 Title: JavaScript 学习笔记
 Author: Yu Baniliy
 ---
-![pexels-krivec-ales-547125](D:\GitHub-code\LNotes-repo\JavaScript笔记\JavaScript初识.assets\pexels-krivec-ales-547125.jpg)
+![pexels-krivec-ales-547125](https://gitee.com/baniliy/pic-github/raw/master/img/pexels-krivec-ales-547125.jpg)
 
 # JavaScript
 
