@@ -6,10 +6,6 @@ Author: Yu Baniliy
 
 # JavaScript
 
-
-
-> 词汇目录
-
 ------
 
 ## 1.初识JavaScript
@@ -1773,7 +1769,9 @@ console.log(arr);
 
 
 
+--------
 
+> ***Baniliy***
 
 
 
