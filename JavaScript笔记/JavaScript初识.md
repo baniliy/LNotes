@@ -1319,8 +1319,8 @@ function fn1() {
         fn3();
         function fn3() {
             var a = 4;
-            console.log(a); //a的值 ?
-            console.log(b); //b的值 ?
+            console.log(a); //a的值 4
+            console.log(b); //b的值 22
         }
     }
 }
@@ -1346,7 +1346,7 @@ JavaScript 代码是由浏览器中的 JavaScript 解析器来执行的。JavaSc
 
 ```javascript
 console.log(num);  // 结果是多少？
-var num = 10;      // ？
+var num = 10;      // 输出'undefined'而不是报错
 
 ```
 
@@ -1476,7 +1476,7 @@ star.sayHi();              // 调用 sayHi 方法,注意，一定不要忘记带
 ###### 利用new Object创建对象
 
 ```javascript
-var andy = new Obect();
+var andy = new Object();
 andy.name = 'Baniliy';
 andy.age = 18;
 andy.sex = '男';
@@ -1753,13 +1753,46 @@ console.log(arr);
 
 ==基本包装类型==就是把简单数据类型包装成为复杂数据类型，这样基本数据类型就有了属性和方法。
 
+字符串的不可变：指的是里面的值不可变，虽然看上去可以改变内容，但其实是地址变了，内存中开辟了一个新的内存空间。
+
+```javascript
+var str = 'abc';
+str = 'hello';
+// 当重新给 str 赋值的时候，常量'abc'不会被修改，依然在内存中
+// 重新给字符串赋值，会重新在内存中开辟空间，这个特点就是字符串的不可变
+// 由于字符串的不可变，在大量拼接字符串的时候会有效率问题
+var str = '';
+for (var i = 0; i < 100000; i++) {
+    str += i;
+}
+console.log(str); // 这个结果需要花费大量时间来显示，因为需要不断的开辟新的空间
+```
 
 
 
+字符串查找
+
+| 方法名                             | 说明                                                         |
+| ---------------------------------- | ------------------------------------------------------------ |
+| indexOf('要查找的字符',开始的位置) | 返回指定内容在原字符串中的位置，找不到返回-1，开始位置是index索引号 |
+| lastIndexOf( )                     | 从后往前找，只找第一个匹配的                                 |
+
+| 方法名            | 说明                                     | 使用                             |
+| ----------------- | ---------------------------------------- | -------------------------------- |
+| charAt(index)     | 返回指定位置的字符(index字符串的索引号)  | str.charAt(0)                    |
+| charCodeAt(index) | 获取指定位置处字符的ASCII码(index索引号) | str.charCodeAt(0)                |
+| str[index]        | 获取指定位置处字符                       | HTML5,IE8+支持charAt()等能够方法 |
 
 
 
+字符串操作
 
+| 方法名                     | 说明                                                         |
+| -------------------------- | ------------------------------------------------------------ |
+| concat(str1,str2,str3,...) | concat()方法用于连接两个或多个字符串。拼接字符串，等效与'+'，'+'更常用 |
+| substr(start,length)       | 从start位置开始（索引号），区length个字符                    |
+| slice(start,end)           | 从start位置开始，截取到end位置，end取不到                    |
+| substring(start,end)       | 从start位置开始，截取到end位置，end取不到（不接受负值）      |
 
 
 
