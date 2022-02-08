@@ -2,9 +2,11 @@
 
 > This is study note from a beginner.
 >
->   ==CSS==  ==HTML==  ==JavaScript==  ==408==  ==kaoyan==
+>   `CSS`  `HTML`  `JavaScript` `408`  `kaoyan`  `Django`  `MCU`  `Machine Learning`
 
 文档内容待完善，持续更新中！·
+
+- [x] MCU
 
 软件推荐：
 
